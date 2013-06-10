@@ -1,0 +1,8 @@
+<h1>Announcements</h1>
+<ul>
+  <% @announcements.each do |ann| %>
+    <li><%= link_to ann.title, url_for(ann) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Make an announcement!", new_announcement_path %>

@@ -1,4 +1,11 @@
 HerokuTest::Application.routes.draw do
+  root :to => "home#index"
+
+  get "/about" => "home#about"
+
+  resources :announcements
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
